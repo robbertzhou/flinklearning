@@ -11,10 +11,41 @@ import lombok.NoArgsConstructor;
  * 微信公众号：zhisheng
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Word {
+    public Word(){
+
+    }
+
+    public Word(String word,int count,long timestamp){
+        this.word = word;
+        this.count = count;
+        this.timestamp = timestamp;
+    }
     private String word;
     private int count;
     private long timestamp;
+
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
 }
