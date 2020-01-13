@@ -47,7 +47,7 @@ public class Main {
             public void apply(TimeWindow window, Iterable<Student> values, Collector<List<Student>> out) throws Exception {
                 ArrayList<Student> students = Lists.newArrayList(values);
                 if (students.size() > 0) {
-                    log.info("1 分钟内收集到 student 的数据条数是：" + students.size());
+//                    log.info("1 分钟内收集到 student 的数据条数是：" + students.size());
                     out.collect(students);
                 }
             }

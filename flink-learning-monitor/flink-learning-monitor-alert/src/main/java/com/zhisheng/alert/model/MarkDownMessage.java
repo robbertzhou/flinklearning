@@ -13,10 +13,34 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MarkDownMessage extends BaseMessage {
+    public MarkDownMessage(){
+
+    }
+
+    public MarkDownMessage(MarkDownContent markdown,AtMobiles at){
+        this.markdown = markdown;
+        this.at = at;
+    }
 
     public MarkDownContent markdown;
 
     public AtMobiles at;
+
+    public MarkDownContent getMarkdown() {
+        return markdown;
+    }
+
+    public void setMarkdown(MarkDownContent markdown) {
+        this.markdown = markdown;
+    }
+
+    public AtMobiles getAt() {
+        return at;
+    }
+
+    public void setAt(AtMobiles at) {
+        this.at = at;
+    }
 
     @Override
     protected void init() {
@@ -35,5 +59,21 @@ public class MarkDownMessage extends BaseMessage {
          * markdown格式的消息
          */
         private String text;
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
     }
 }

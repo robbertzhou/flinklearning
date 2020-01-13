@@ -1,5 +1,6 @@
 package com.zhisheng.alert.utils;
 
+import com.zhisheng.alert.function.OutageProcessFunction;
 import com.zhisheng.alert.model.AtMobiles;
 import com.zhisheng.alert.model.LinkMessage;
 import com.zhisheng.alert.model.MarkDownMessage;
@@ -7,6 +8,8 @@ import com.zhisheng.alert.model.TextMessage;
 import com.zhisheng.common.utils.GsonUtil;
 import com.zhisheng.common.utils.HttpUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -17,6 +20,7 @@ import java.util.List;
  */
 @Slf4j
 public class DingDingGroupMsgUtil {
+    final static Logger log = LoggerFactory.getLogger(DingDingGroupMsgUtil.class);
     /**
      * 组装发送的文本信息
      *

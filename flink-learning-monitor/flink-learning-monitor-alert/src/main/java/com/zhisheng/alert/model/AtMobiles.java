@@ -22,4 +22,24 @@ public class AtMobiles {
      * @所有人时:true,否则为:false
      */
     public Boolean isAtAll;
+
+    public List<String> getAtMobiles() {
+        return atMobiles;
+    }
+
+    public void setAtMobiles(List<String> atMobiles) {
+        this.atMobiles = atMobiles;
+    }
+
+    public Boolean getAtAll() {
+        return isAtAll;
+    }
+
+    public void setAtAll(Boolean atAll) {
+        isAtAll = atAll;
+    }
+
+    public void setIsAtAll(boolean isAtAll) {
+        this.isAtAll = isAtAll;
+    }
 }

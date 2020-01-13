@@ -41,6 +41,94 @@ public class OutageMetricEvent {
     //the machine alert count
     private int counter = 0;
 
+    public String getClusterName() {
+        return clusterName;
+    }
+
+    public void setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+    }
+
+    public String getHostIp() {
+        return hostIp;
+    }
+
+    public void setHostIp(String hostIp) {
+        this.hostIp = hostIp;
+    }
+
+    public Long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public Boolean getRecover() {
+        return recover;
+    }
+
+    public void setRecover(Boolean recover) {
+        this.recover = recover;
+    }
+
+    public Long getRecoverTime() {
+        return recoverTime;
+    }
+
+    public void setRecoverTime(Long recoverTime) {
+        this.recoverTime = recoverTime;
+    }
+
+    public Long getSystemTimestamp() {
+        return systemTimestamp;
+    }
+
+    public void setSystemTimestamp(Long systemTimestamp) {
+        this.systemTimestamp = systemTimestamp;
+    }
+
+    public Double getCpuUsePercent() {
+        return cpuUsePercent;
+    }
+
+    public void setCpuUsePercent(Double cpuUsePercent) {
+        this.cpuUsePercent = cpuUsePercent;
+    }
+
+    public Double getMemUsedPercent() {
+        return memUsedPercent;
+    }
+
+    public void setMemUsedPercent(Double memUsedPercent) {
+        this.memUsedPercent = memUsedPercent;
+    }
+
+    public Double getSwapUsedPercent() {
+        return swapUsedPercent;
+    }
+
+    public void setSwapUsedPercent(Double swapUsedPercent) {
+        this.swapUsedPercent = swapUsedPercent;
+    }
+
+    public Double getLoad5() {
+        return load5;
+    }
+
+    public void setLoad5(Double load5) {
+        this.load5 = load5;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
+
     public OutageMetricEvent(String clusterName, String hostIp, long timestamp, Boolean recover, Long systemTimestamp) {
         this.clusterName = clusterName;
         this.hostIp = hostIp;

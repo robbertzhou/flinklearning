@@ -59,7 +59,7 @@ public class BroadcastUpdateAlertRule {
                             AlertRule alertRule = broadcastState.get(value.getName());
                             double used = (double) value.getFields().get(alertRule.getMeasurement());
                             if (used > Double.valueOf(alertRule.getThresholds())) {
-                                log.info("AlertRule = {}, MetricEvent = {}", alertRule, value);
+//                                log.info("AlertRule = {}, MetricEvent = {}", alertRule, value);
                                 out.collect(value);
                             }
                         }

@@ -5,8 +5,11 @@ import com.google.common.base.Throwables;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.jayway.jsonpath.JsonPath;
+import com.zhisheng.alert.function.OutageProcessFunction;
 import com.zhisheng.common.utils.HttpUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,7 +22,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 public class DingDingAccessTokenUtil {
-
+    final static Logger log = LoggerFactory.getLogger(DingDingAccessTokenUtil.class);
     public static final String DING_DING_ACCESS_TOKEN = "access_token";
     public static final String DING_DING_GET_TOKEN_URL = "https://oapi.dingtalk.com/gettoken";
 

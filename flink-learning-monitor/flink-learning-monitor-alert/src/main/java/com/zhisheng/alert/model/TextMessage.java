@@ -13,6 +13,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TextMessage extends BaseMessage {
+    public TextMessage(){
+
+    }
+
+    public TextMessage(TextContent text,AtMobiles at){
+        this.text = text;
+        this.at = at;
+    }
 
     /**
      * 消息内容
@@ -24,6 +32,21 @@ public class TextMessage extends BaseMessage {
      */
     public AtMobiles at;
 
+    public TextContent getText() {
+        return text;
+    }
+
+    public void setText(TextContent text) {
+        this.text = text;
+    }
+
+    public AtMobiles getAt() {
+        return at;
+    }
+
+    public void setAt(AtMobiles at) {
+        this.at = at;
+    }
 
     @Override
     protected void init() {
@@ -37,6 +60,14 @@ public class TextMessage extends BaseMessage {
          * 消息内容
          */
         private String content;
+
+        public String getContent() {
+            return content;
+        }
+
+        public void setContent(String content) {
+            this.content = content;
+        }
     }
 
 }

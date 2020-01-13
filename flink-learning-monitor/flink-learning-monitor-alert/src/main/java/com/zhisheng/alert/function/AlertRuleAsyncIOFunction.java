@@ -6,6 +6,8 @@ import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.async.ResultFuture;
 import org.apache.flink.streaming.api.functions.async.RichAsyncFunction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -22,9 +24,9 @@ import java.util.Map;
  * blog：http://www.54tianzhisheng.cn/
  * 微信公众号：zhisheng
  */
-@Slf4j
+//@Slf4j
 public class AlertRuleAsyncIOFunction extends RichAsyncFunction<MetricEvent, MetricEvent> {
-
+    final static Logger log = LoggerFactory.getLogger(AlertRuleAsyncIOFunction.class);
     PreparedStatement ps;
     private Connection connection;
 

@@ -15,7 +15,9 @@ import lombok.NoArgsConstructor;
 public class LinkMessage extends BaseMessage {
 
     public Link link;
-
+    public   LinkMessage(Link link) {
+        this.link = link;
+    }
     @Override
     protected void init() {
         this.msgtype = MessageType.link;
@@ -42,5 +44,37 @@ public class LinkMessage extends BaseMessage {
          * 消息跳转URL
          */
         private String messageUrl;
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public String getPicUrl() {
+            return picUrl;
+        }
+
+        public void setPicUrl(String picUrl) {
+            this.picUrl = picUrl;
+        }
+
+        public String getMessageUrl() {
+            return messageUrl;
+        }
+
+        public void setMessageUrl(String messageUrl) {
+            this.messageUrl = messageUrl;
+        }
     }
 }

@@ -9,6 +9,8 @@ import org.apache.flink.api.common.typeinfo.TypeInformation;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.functions.KeyedProcessFunction;
 import org.apache.flink.util.Collector;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Desc:
@@ -18,7 +20,7 @@ import org.apache.flink.util.Collector;
  */
 @Slf4j
 public class OutageProcessFunction extends KeyedProcessFunction<String, OutageMetricEvent, OutageMetricEvent> {
-
+    final static Logger log = LoggerFactory.getLogger(OutageProcessFunction.class);
     private ValueState<OutageMetricEvent> outageMetricState;
     private ValueState<Boolean> recover;
 
